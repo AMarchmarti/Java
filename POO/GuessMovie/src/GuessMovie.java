@@ -54,15 +54,16 @@ public class GuessMovie {
             System.out.println("Choose one letter:");
             Scanner scanner = new Scanner(System.in);
             String letter = scanner.nextLine();
-            if (letter.length() > 1 && letter != movie){
+            if (letter.length() > 1 && letter.equals(movie)){
+                System.out.println("Oh! Wonderful, you guess the movie! Great job!!");
+                break;
+
+
+
+            }else if (letter.length() > 1) {
                 tries -= 1;
                 System.out.println("Error, that's not the correct movie");
                 System.out.printf("Try again, you still have %s tries\n", tries);
-
-
-            }else if (letter.length() > 1 && letter == movie){
-                System.out.println("Oh! Wonderful, you guess the movie! Great job!!");
-                break;
 
             }
             if (letter.length() == 1){
