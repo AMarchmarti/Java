@@ -60,33 +60,35 @@ public class GuessMovie {
                 System.out.printf("Try again, you still have %s tries\n", tries);
 
 
-            }else if (letter == movie){
+            }else if (letter.length() > 1 && letter == movie){
                 System.out.println("Oh! Wonderful, you guess the movie! Great job!!");
                 break;
 
             }
             if (letter.length() == 1){
-
-                if (movie.indexOf(letter) == -1){
+                int position = movie.indexOf(letter);
+                if (position == -1){
                     tries -= 1;
+                    System.out.println(riddle);
                     mistakes += letter + "," + " ";
-                    System.out.printf("Oh! This %s ins't correct\n", letter);
+                    System.out.printf("Oh! This letter ins't correct\n");
                     System.out.println(mistakes);
                     System.out.printf("You have still %s tries\n", tries);
 
                 }
                 else{
-                    for (int i = 0; i < movie.length(); i++){
-                        riddle = riddle.substring(0,i) + letter + riddle.substring(i + 1, riddle.length());
+                    while(position!= -1){
+                        riddle = riddle.substring(0, position) + letter + riddle.substring(position + 1, riddle.length());
+                        position = movie.indexOf(letter, position + 1);
                         }
                     if (riddle.contains("_")){
                         System.out.println(riddle);
                         System.out.printf("Letters that you have falied %s\n", mistakes);
                     }
                     else{
-                        System.out.println("Great job!! Continue");
-                        System.out.println(riddle);
-                        System.out.printf("Letters that you have falied %s\n", mistakes);
+                        System.out.println("Oh! Wonderful, you guess the movie! Great job!!");
+                        break;
+
 
                     }
                 }
