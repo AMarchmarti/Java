@@ -1,5 +1,7 @@
 package dni;
 
+import java.io.IOException;
+
 public class Dni {
 
     private String dni = null;
@@ -58,7 +60,7 @@ public class Dni {
         return getDniSano();
     }
 
-    
+
     public Boolean checkDni() {
         setNumeroSano(checkLength() && dniNumbers(getNumbers()));
         return getNumeroSano();
@@ -73,11 +75,12 @@ public class Dni {
         }
     }
 
-    public Character obtenerLetra(){
+    public Character obtenerLetra() throws IOException {
         if (getNumeroSano()) {
             return this.table.findLetter(getNumbers());
-        }
-    }
+        }else{
+            throw new IOException("Numeros incorrectos");
+        }}
 
 
     public Boolean checkLength(){
@@ -101,9 +104,9 @@ public class Dni {
 
 
     public Boolean letraValida (){
-        if (obtenerLetra() == getLetters()) {
-            return true;
-        }else{
+        try {return obtenerLetra() == getLetters();
+
+        }catch (IOException ioexception){
             return false;}
     }
 
