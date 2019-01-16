@@ -53,6 +53,33 @@ public class Dni {
     }
 
 
+    public Boolean checkDniCif(){
+        setDniSano(checkDni() && checkLetra());
+        return getDniSano();
+    }
+
+    
+    public Boolean checkDni() {
+        setNumeroSano(checkLength() && dniNumbers(getNumbers()));
+        return getNumeroSano();
+    }
+
+    public Boolean checkLetra(){
+        if (getNumeroSano()){
+            setLetraSana(Character.isUpperCase(getLetters()) && letraValida());
+            return getLetraSana();
+        }else{
+            return false;
+        }
+    }
+
+    public Character obtenerLetra(){
+        if (getNumeroSano()) {
+            return this.table.findLetter(getNumbers());
+        }
+    }
+
+
     public Boolean checkLength(){
         if (getDni().length() == 9) {
             return true;
@@ -73,12 +100,19 @@ public class Dni {
     }
 
 
-    public Boolean dniLetters (String cadena){
-        String newstring = cadena.substring(cadena.length() - 1);
-        if (table.indexOf(newstring) != -1){
+    public Boolean letraValida (){
+        if (obtenerLetra() == getLetters()) {
             return true;
         }else{
-            return true;}
+            return false;}
     }
 
+
+    public String getNumbers(){
+        return (String) dni.substring(0, dni.length() - 1);
+    }
+
+    public Character getLetters(){
+        return dni.charAt(dni.length() - 1);
+    }
 }
