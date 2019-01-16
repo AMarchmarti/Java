@@ -1,3 +1,5 @@
+package dni;
+
 public class Dni {
 
     private String dni = null;
