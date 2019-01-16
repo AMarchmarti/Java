@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -52,6 +50,7 @@ public class VerifyDNI {
         if (dni && letter){
             return true;
         }
+        return false;
     }
 
 
