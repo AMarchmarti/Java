@@ -54,10 +54,10 @@ public class GuessMovie {
             System.out.println("Choose one letter:");
             Scanner scanner = new Scanner(System.in);
             String letter = scanner.nextLine();
+
             if (letter.length() > 1 && letter.equals(movie)){
                 System.out.println("Oh! Wonderful, you guess the movie! Great job!!");
                 break;
-
 
 
             }else if (letter.length() > 1) {
