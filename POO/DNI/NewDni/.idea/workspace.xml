@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02267382-9c92-41b5-a4e2-f7879bca4246" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/dni/Dni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dni/Dni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VerifyDNI/src/VerifyDNI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../VerifyDNI/src/VerifyDNI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,9 +15,18 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../VerifyDNI/src/VerifyDNI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dni/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="51">
               <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
@@ -34,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dni/Dni.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+            <state relative-caret-position="307">
+              <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
               <folding>
                 <element signature="e#270#271#0" expanded="true" />
                 <element signature="e#300#301#0" expanded="true" />
@@ -85,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/src/dni/Tests.java" />
         <option value="$PROJECT_DIR$/src/dni/AssignationTable.java" />
+        <option value="$PROJECT_DIR$/../VerifyDNI/src/VerifyDNI.java" />
         <option value="$PROJECT_DIR$/src/dni/Dni.java" />
       </list>
     </option>
@@ -128,7 +139,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547661844157" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547662989783" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -250,10 +261,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dni/Tests.java">
+    <entry file="file://$PROJECT_DIR$/../VerifyDNI/src/VerifyDNI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="204">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -264,10 +275,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dni/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dni/Dni.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+        <state relative-caret-position="307">
+          <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
           <folding>
             <element signature="e#270#271#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
