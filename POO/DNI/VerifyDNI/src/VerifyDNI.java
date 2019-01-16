@@ -42,7 +42,7 @@ public class VerifyDNI {
         }
         if (dic.indexOf(read.substring(9)) != -1){
 
-            return false
+            return false;
         }
         else{
             boolean letter = true;
