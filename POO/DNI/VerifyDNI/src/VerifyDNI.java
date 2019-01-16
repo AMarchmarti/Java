@@ -21,7 +21,7 @@ public class VerifyDNI {
 
     private boolean checkLength(String read){
 
-        if (read.length() == 10) {
+        if (read.length() == 9) {
             return true;
         }
         else{
@@ -31,33 +31,36 @@ public class VerifyDNI {
 
     private boolean dniNumbers (String read){
 
-        String newread = read.substring(0,8);
-        try{
-            Integer.parseInt(newread);
-        }catch (Exception e){
+        try {
+            int num = Integer.parseInt(read.substring(0,7));
+            return true;
+        } catch (NumberFormatException num) {
             return false;
         }
-        return true;
+
     }
 
 
     private boolean dniLetters (String read){
 
         String dic = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        if (dic.indexOf(read.substring(9)) != -1){
+        String newstring = read.substring(8);
+        if (dic.indexOf(newstring) != -1){
+            return true;
+        }else{
+        return true;}
+    }
+
+    private boolean verify(String read) {
+
+        if (checkLength(read) && dniNumbers(read) && dniLetters(read)) {
+            System.out.println("DNI correcto!");
+            return true;
+        } else {
+            System.out.println("Este DNI no es correcto");
             return false;
         }
-        return true;
     }
-
-    private boolean verify(String read){
-
-        if(checkLength(read) && dniNumbers(read) && dniLetters(read)){
-            return true;
-        }
-        return false;
-    }
-
 
 
 
