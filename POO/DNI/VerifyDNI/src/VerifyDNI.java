@@ -29,25 +29,30 @@ public class VerifyDNI {
         }
     }
 
-    private boolean verify(String read){
+    private boolean dniNumbers (String read){
 
-        String dic = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        checkLength(read);
+        String newread = read.substring(0,8);
         try{
-            Integer.read.substring(0,8);
-            boolean dni = true;
-
+            Integer.parseInt(newread);
         }catch (Exception e){
             return false;
         }
-        if (dic.indexOf(read.substring(9)) != -1){
+        return true;
+    }
 
+
+    private boolean dniLetters (String read){
+
+        String dic = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (dic.indexOf(read.substring(9)) != -1){
             return false;
         }
-        else{
-            boolean letter = true;
-        }
-        if (dni && letter){
+        return true;
+    }
+
+    private boolean verify(String read){
+
+        if(checkLength(read) && dniNumbers(read) && dniLetters(read)){
             return true;
         }
         return false;
