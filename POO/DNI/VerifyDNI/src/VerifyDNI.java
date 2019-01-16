@@ -30,7 +30,6 @@ public class VerifyDNI {
     }
 
     private boolean dniNumbers (String read){
-
         try {
             int num = Integer.parseInt(read.substring(0,7));
             return true;
