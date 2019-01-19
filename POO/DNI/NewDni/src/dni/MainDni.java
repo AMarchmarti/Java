@@ -1,10 +1,11 @@
 package dni;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainDni {
     public static void main(String[] args) {
-        private TestCasesDni casosTest = new TestCasesDni();
+        TestCasesDni casosTest = new TestCasesDni();
 
         for(String dni : casosTest){
             Dni objetoDniCif = new Dni(dni);
