@@ -3,10 +3,11 @@ package dni;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainDni {
-    public static void main(String[] args) {
-        TestCasesDni casosTest = new TestCasesDni();
 
+public class MainDni {
+    public static void main(String[] args){
+        TestCasesDni tests = new TestCasesDni();
+        ArrayList<String> casosTest = tests.getTest();
         for(String dni : casosTest){
             Dni objetoDniCif = new Dni(dni);
             System.out.print(objetoDniCif.getDni());

@@ -6,14 +6,25 @@ import java.util.Scanner;
 
 public class TestCasesDni {
 
-    private ArrayList fileToList() throws Exception {
+    private ArrayList<String> test = null;
+
+    private void setTest(ArrayList<String> test) {
+        this.test = test;
+    }
+
+    public ArrayList getTest() {
+        return this.test;
+    }
+
+    private ArrayList<String> fileToList() throws Exception {
         File file = new File("dnicorrectos.txt");
         Scanner test = new Scanner(file);
-        ArrayList casosTest = new ArrayList();
+        ArrayList<String> casosTest = new ArrayList();
         while (test.hasNextLine()) {
             String caso = test.nextLine();
             casosTest.add(caso);
         }
+        setTest(casosTest);
         return casosTest;
     }
 }
