@@ -1,8 +1,30 @@
 package dni;
 
+import java.io.IOException;
+
 public class MainDni {
     public static void main(String[] args) {
+        private TestCasesDni casosTest = new TestCasesDni();
 
+        for(String dni : casosTest){
+            Dni objetoDniCif = new Dni(dni);
+            System.out.print(objetoDniCif.getDni());
+
+            if( objetoDniCif.checkDniCif()){
+                System.out.println(" PASS");
+            }
+            else
+                System.out.println(" FAIL");
+
+            System.out.println("dni --> " + objetoDniCif.getNumeroSano());
+            System.out.println("letra --> " + objetoDniCif.getLetraSana());
+            try{
+                System.out.println("La letra debería ser --> " + objetoDniCif.obtenerLetra());
+            }
+            catch(IOException ioexcepcion){
+                System.out.println("La letra es --> " + objetoDniCif.getLetters());
+            }
+        }
 
     }
 }
