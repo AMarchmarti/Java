@@ -1,7 +1,11 @@
+
+
 package estacion;
 
 import bicicleta.Bicicleta;
 import tarjetaUsuario.TarjetaUsuario;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Estacion {
 
@@ -107,6 +111,12 @@ public class Estacion {
                         }
 
                 }
+        }
+
+
+        public int generarAnclaje(){
+                int posicionAzar = ThreadLocalRandom.current().nextInt(0, this.anclajes.length);
+                return posicionAzar;
         }
 
 
