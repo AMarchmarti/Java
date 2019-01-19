@@ -13,8 +13,8 @@ public class TarjetaUsuario {
                         } catch (NumberFormatException num) {
                                 this.id = 0;
                         }
-                        this.activada = valor;
                 }
+                this.activada = valor;
         }
 
         public int getTarjetaId(){
