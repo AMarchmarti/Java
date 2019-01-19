@@ -1,6 +1,7 @@
 package estacion;
 
 import bicicleta.Bicicleta;
+import tarjetaUsuario.TarjetaUsuario;
 
 public class Estacion {
 
@@ -83,14 +84,30 @@ public class Estacion {
 
 
         public void mostrarAnclaje(Bicicleta bici, int numeroAnclaje){
-                System.out.println("la bicicleta " + bici.getId() + " esta anclada en " + numeroAnclaje);
+                System.out.println("La bicicleta " + bici.getId() + " esta anclada en " + numeroAnclaje);
         }
 
 
         public void mostrarBicicleta(Bicicleta bici, int numeroAnclaje){
-                System.out.println("la bicicleta " + bici.getId() + " estaba anclada en " + numeroAnclaje);
+                System.out.println("La bicicleta " + bici.getId() + " estaba anclada en " + numeroAnclaje);
         }
 
+
+        public Boolean leerTajetaUsuario(TarjetaUsuario tarjetaUsuario){
+                return tarjetaUsuario.getActivada();
+        }
+
+
+        public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
+
+                if (leerTajetaUsuario(tarjetaUsuario)){
+                        Boolean sitioOcupado = true;
+                        while (sitioOcupado){
+
+                        }
+
+                }
+        }
 
 
 
