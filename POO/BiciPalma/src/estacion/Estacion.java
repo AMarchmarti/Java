@@ -101,19 +101,22 @@ public class Estacion {
         }
 
 
-        public Boolean leerTajetaUsuario(TarjetaUsuario tarjetaUsuario){
+        public Boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario){
                 return tarjetaUsuario.getActivada();
         }
 
 
         public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
 
-                if (leerTajetaUsuario(tarjetaUsuario)){
-                        Boolean sitioOcupado = true;
-                        while (sitioOcupado){
-
+                if (leerTarjetaUsuario(tarjetaUsuario)){
+                        int posicion = generarAnclaje();
+                        while (this.anclajes[posicion] != null) {
+                                numeroAnclajes = posicion + 1;
+                                mostrarBicicleta(this.anclajes[posicion], numeroAnclajes);
+                                this.anclajes[posicion] = null;
                         }
-
+                }else{
+                        System.out.println("La tarjecta de usuario no esta activada, intentelo más tarde");
                 }
         }
 
