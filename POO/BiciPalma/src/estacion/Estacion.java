@@ -20,7 +20,8 @@ public class Estacion {
                 this.id = id;
                 this.direccion = direccion;
                 this.numeroAnclajes = numeroAnclajes;
-                this.anclajes = new Bicicleta[anclajes];
+                this.anclajes = new Bicicleta[numeroAnclajes];
+
         }
 
 
@@ -63,11 +64,13 @@ public class Estacion {
                 for (Bicicleta anclaje : this.anclajes){
                         if (anclaje != null) {
                                 System.out.println("Este anclaje " + numeroAnclaje + " esta ocupsdo por " + this.anclajes[posicion].getId());
+
                         }else{
                                 System.out.println("Este anclaje " + numeroAnclaje + " esta libre.");
-                                posicion ++;
+
                         }
                         numeroAnclaje ++;
+                        posicion ++;
                 }
         }
 
@@ -76,12 +79,13 @@ public class Estacion {
                 int posicion = 0;
                 int numeroAnclaje = 1;
                 for (Bicicleta anclaje : this.anclajes){
-                        if (anclaje == null){
-                                this.anclajes[posicion] = bici;
-                                mostrarAnclaje(bici, numeroAnclaje);
-                        }else{
+                        if (anclaje != null){
                                 posicion ++;
                                 numeroAnclaje ++;
+                        }else{
+                                this.anclajes[posicion] = bici;
+                                mostrarAnclaje(bici, numeroAnclaje);
+                                break;
                         }
                 }
         }

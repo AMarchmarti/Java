@@ -1,3 +1,5 @@
+
+
 package appalma;
 
 import bicicleta.Bicicleta;
@@ -47,10 +49,10 @@ public class BiciPalma {
 
         System.out.println("\n **** caso TEST consultar bicicletas ancladas **** \n");
 
-        estacion.consultarAnclajes();
+        estacion.consultarAnclajes();}}
 
         /* caso TEST retirar bicicleta */
-
+/**
         System.out.println("\n **** caso TEST retirar bicicleta **** \n");
 
         TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
@@ -64,3 +66,4 @@ public class BiciPalma {
         System.out.println("anclajesLibres: " + estacion.anclajesLibres());
     }
 }
+**/
