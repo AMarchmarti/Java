@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdfe46db-a36e-41df-b752-04c9fa45391c" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CurrentAccount/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CurrentAccount/.idea/workspace.xml" afterDir="false" />
@@ -9,6 +10,9 @@
       <change beforePath="$PROJECT_DIR$/../../codewars_katas/kyu_8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../codewars_katas/kyu_8/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../codewars_katas/kyu_8/src/Banjo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../codewars_katas/kyu_8/src/Banjo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../codewars_katas/kyu_8/src/BanjoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../codewars_katas/kyu_8/src/BanjoTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/estacion/Estacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/estacion/Estacion.java" afterDir="false" />
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +26,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/appalma/BiciPalma.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="969">
+=======
+            <state relative-caret-position="340">
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
               <caret line="59" column="119" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -34,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tarjetaUsuario/TarjetaUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="168">
               <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
             </state>
           </provider>
@@ -52,8 +60,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/estacion/Estacion.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="190">
               <caret line="111" column="56" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+=======
+            <state relative-caret-position="290">
+              <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +98,8 @@
         <option value="$PROJECT_DIR$/src/tarjetaUsuario/TarjetaUsuario.java" />
         <option value="$PROJECT_DIR$/src/tarjetaUsuario/MainTarjeta.java" />
         <option value="$PROJECT_DIR$/src/bicicleta/MainBicicleta.java" />
-        <option value="$PROJECT_DIR$/src/estacion/Estacion.java" />
         <option value="$PROJECT_DIR$/src/appalma/BiciPalma.java" />
+        <option value="$PROJECT_DIR$/src/estacion/Estacion.java" />
       </list>
     </option>
   </component>
@@ -243,9 +256,16 @@
     <option name="totallyTimeSpent" value="16349000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+=======
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -254,7 +274,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -262,7 +282,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -319,7 +339,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/appalma/BiciPalma.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="969">
+=======
+        <state relative-caret-position="340">
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
           <caret line="59" column="119" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -329,7 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tarjetaUsuario/TarjetaUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="168">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
@@ -343,8 +367,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/estacion/Estacion.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="190">
           <caret line="111" column="56" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+=======
+        <state relative-caret-position="290">
+          <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="02267382-9c92-41b5-a4e2-f7879bca4246" name="Default Changelist" comment="" />
+=======
     <list default="true" id="02267382-9c92-41b5-a4e2-f7879bca4246" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../BiciPalma/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../BiciPalma/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../BiciPalma/src/appalma/BiciPalma.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../BiciPalma/src/appalma/BiciPalma.java" afterDir="false" />
@@ -9,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/../../../codewars_katas/kyu_8/src/Banjo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../codewars_katas/kyu_8/src/Banjo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../codewars_katas/kyu_8/src/BanjoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../codewars_katas/kyu_8/src/BanjoTest.java" afterDir="false" />
     </list>
+>>>>>>> ab1e3a3fb211c2697e7d014a640e58a616f0e24b
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,10 +142,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547667576844" />
+=======
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547917625635" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547901175033" />
+>>>>>>> ab1e3a3fb211c2697e7d014a640e58a616f0e24b
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -220,7 +232,11 @@
     <option name="totallyTimeSpent" value="8190000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+=======
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> ab1e3a3fb211c2697e7d014a640e58a616f0e24b
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -231,8 +247,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+>>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />

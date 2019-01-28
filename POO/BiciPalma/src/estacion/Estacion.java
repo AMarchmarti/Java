@@ -63,7 +63,7 @@ public class Estacion {
                 int numeroAnclaje = 1;
                 for (Bicicleta anclaje : this.anclajes){
                         if (anclaje != null) {
-                                System.out.println("Este anclaje " + numeroAnclaje + " esta ocupsdo por " + this.anclajes[posicion].getId());
+                                System.out.println("Este anclaje " + numeroAnclaje + " esta ocupado por " + this.anclajes[posicion].getId());
 
                         }else{
                                 System.out.println("Este anclaje " + numeroAnclaje + " esta libre.");
@@ -78,14 +78,15 @@ public class Estacion {
         public void anclarBicicleta(Bicicleta bici){
                 int posicion = 0;
                 int numeroAnclaje = 1;
-                for (Bicicleta anclaje : this.anclajes){
-                        if (anclaje != null){
+                Boolean anclajeLibre = true;
+                while (anclajeLibre){
+                        if (this.anclajes[posicion] != null){
                                 posicion ++;
                                 numeroAnclaje ++;
                         }else{
                                 this.anclajes[posicion] = bici;
                                 mostrarAnclaje(bici, numeroAnclaje);
-                                break;
+                                anclajeLibre = false;
                         }
                 }
         }
@@ -109,14 +110,17 @@ public class Estacion {
         public void retirarBicicleta(TarjetaUsuario tarjetaUsuario){
 
                 if (leerTarjetaUsuario(tarjetaUsuario)){
-                        int posicion = generarAnclaje();
-                        while (this.anclajes[posicion] != null) {
-                                numeroAnclajes = posicion + 1;
-                                mostrarBicicleta(this.anclajes[posicion], numeroAnclajes);
-                                this.anclajes[posicion] = null;
+                        Boolean anclajeOcupado = true;
+                        while (anclajeOcupado) {
+                                int posicion = generarAnclaje();
+                                int numeroAnclajes = posicion + 1;
+                                if (this.anclajes[posicion] != null){
+                                        mostrarBicicleta(this.anclajes[posicion], numeroAnclajes);
+                                        this.anclajes[posicion] = null;
+                                        anclajeOcupado = false;}
                         }
                 }else{
-                        System.out.println("La tarjecta de usuario no esta activada, intentelo más tarde");
+                        System.out.println("La tarjeta de usuario no esta activada, intentelo más tarde");
                 }
         }
 
