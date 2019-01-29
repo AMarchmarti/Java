@@ -5,36 +5,36 @@ import static org.junit.Assert.*;
 
 
 public class ScoreCardTest {
-    ScoreCard card = new ScoreCard();
+    private ScoreCard card = new ScoreCard();
 
     @Test
-    public void bowlsTest(){
+    public void bowlsTest() {
         String symbols = "-123456789X/";
-        for (int index = 0; index < symbols.length(); index ++){
-            if (symbols.charAt(index) == '/'){
-                assertEquals(10, card.getSpare(symbols.charAt(index)));
-            }else if (symbols.charAt(index) == 'X') {
-                assertEquals(10, card.getStrike(symbols.charAt(index)));
-            }else {
-                assertEquals(index,card.getBowl(symbols.charAt(index)));
+        for (int index = 0; index < symbols.length(); index++) {
+            if (symbols.charAt(index) == '/') {
+                assertEquals(10, card.calculateSpare(symbols.charAt(index)));
+            } else if (symbols.charAt(index) == 'X') {
+                assertEquals(10, card.calculateStrike(symbols.charAt(index)));
+            } else {
+                assertEquals(index, card.calculatePin(symbols.charAt(index)));
             }
         }
     }
 
     @Test
-    public void scoreNormalRolTest (){
-
-        String punts = "12345123451234512345";
-        int total = 0;
-        assertEquals(60, card.scoreNormalRol(punts, total));
-    }
-
-    @Test
-    public void scoreSpareRolTest(){
-        String pwSpare = "123456789/";
-        String pwSpareTwo = "5/5/5/5/5/5/5/5/5/5/5";
-        int total = 0;
-        assertEquals(55, card.scoreSpareRol(pwSpare, total));
-        assertEquals(150, card.scoreSpareRol(pwSpareTwo, total));
+    public void scoreCardTest(){
+        String basic = "12345123451234512345";
+        String spare = "5/5/5/5/5/5/5/5/5/5/5";
+        String spareStrike = "123456789/X";
+        String advanced = "XXXXXXXXXX5/";
+        String advancedplus = "X12345/X9/87XX9/X";
+        String fina = "XXXXXXXXXX";
+        assertEquals(60, card.scoreCard(basic));
+        assertEquals(150, card.scoreCard(spare));
+        assertEquals(63, card.scoreCard(spareStrike));
+        assertEquals(285, card.scoreCard(advanced));
+        assertEquals(174, card.scoreCard(advancedplus));
+        assertEquals(300, card.scoreCard(fina));
     }
 }
+

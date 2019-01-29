@@ -1,74 +1,87 @@
 public class ScoreCard {
 
-    public ScoreCard(){};
+    private int STRIKE = 10;
+    private int SPARE = 10;
+    private int ZERO = 0;
+    private static String symbols = "-123456789X/";
 
-    public int getStrike(Character strike){
-        if (strike == 'X'){
-            return 10;
-        }else{
-            return strike;
+    public ScoreCard() {
+    }
+
+    ;
+
+    public int getStrike() {
+        return this.STRIKE;
+    }
+
+
+    public int getSpare() {
+        return this.SPARE;
+    }
+
+
+    public int calculateStrike(Character strike) {
+        if (strike == 'X') {
+            return symbols.indexOf(strike);
+        } else {
+            return this.ZERO;
         }
     }
 
 
-    public int getSpare(Character spare){
-        if (spare == '/'){
-            return 10;
-        }else{
-            return spare;
+    public int calculateSpare(Character spare) {
+        if (spare == '/') {
+            return symbols.indexOf(spare) - 1;
+        } else {
+            return this.ZERO;
         }
     }
 
-    public int getBowl (Character bowl){
-        if (bowl == '-'){
-            return 0;
-        }else{
-            int num = Character.getNumericValue(bowl);
+    public int calculatePin(Character bowl) {
+        if (bowl == '-') {
+            return symbols.indexOf(bowl);
+        } else {
+            int num = symbols.indexOf(bowl);
             return num;
         }
     }
 
-    public int scoreNormalRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            total += getBowl(card.charAt(pos));
-        }
-        return total;
-    }
-    /*
-    public int scoreStrikeRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            Character variable = card.charAt(pos);
-            if (variable == 'X') {
-                try{
-                    int num = getSpare(card.charAt(pos  + 1));
-                    int numb = getSpare(card.charAt(pos + 2));
-                    total += getStrike(variable) + num + numb;
-                }catch (NumberFormatException num){
+    public int scoreCard(String card) {
+        int total = 0;
+        for (int i = 0; i < card.length(); i++) {
+            Character normal = card.charAt(i);
+            try {
+                Character min = card.charAt(i - 1);
+                Character spare = card.charAt(i + 1);
+                Character strike = card.charAt(i + 2);
+                if ((normal == 'X') && (spare == 'X') && (strike == 'X')) {
+                    total += calculateStrike(normal) + calculateStrike(spare) + calculateStrike(strike);
+                } else if ((normal == 'X') && (spare == 'X') && (strike != 'X')) {
+                    total += calculateStrike(normal) + calculateStrike(spare) + calculatePin(strike);
+                } else if ((normal == 'X') && (spare != 'X') && (strike == '/')) {
+                    total += calculateStrike(normal) + calculateSpare(strike);
+                } else if (normal == 'X') {
+                    total += calculateStrike(normal) + calculatePin(spare) + calculatePin(strike);
+                } else if ((normal == '/') && (spare != 'X')) {
+                    total += calculateSpare(normal) + calculatePin(spare) - calculatePin(min);
+                } else if ((normal == '/') && (spare == 'X')) {
+                    total += calculateSpare(normal) + calculateStrike(spare) - calculatePin(min);
+                } else {
+                    total += calculatePin(normal);
+                }
 
-
-            }
-    }
-    */
-    public int scoreSpareRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            Character variable = card.charAt(pos);
-
-            try{
-                Character var = card.charAt(pos + 1);
-                if (variable == '/'){
-                    total += getSpare(variable) + getBowl(var) - getBowl(card.charAt(pos - 1));
-
-                }else{
-                    total += getBowl(variable);
-                }}
-            catch (StringIndexOutOfBoundsException var){
-                if (variable == '/'){
-                    total += getSpare(variable);
-
-                }else{
+            } catch (StringIndexOutOfBoundsException spare) {
+                if (normal == '/') {
+                    total += calculateSpare(normal);
+                } else if (normal == 'X') {
+                    total += calculateStrike(normal);
+                } else {
                     return total;
                 }
             }
         }
-        return total;}
+        return total;
+    }
+
 }
+
