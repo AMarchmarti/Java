@@ -14,10 +14,10 @@ public class ScoreCardTest {
         Character spare = '/';
         Character script = '-';
         Character num = '6';
-        assertEquals(10, card.getStrike('X'));
-        assertEquals(10, card.getSpare('/'));
-        assertEquals(0, card.getBowl('-'));
-        assertEquals(6, card.getBowl('6'));
+        assertEquals(10, card.getStrike(x));
+        assertEquals(10, card.getSpare(spare));
+        assertEquals(0, card.getBowl(script));
+        assertEquals(6, card.getBowl(num));
 
     }
 
