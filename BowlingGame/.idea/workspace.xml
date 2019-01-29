@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9982916b-0641-4a21-a0de-06d5c280deca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoreCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoreCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ScoreCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ScoreCardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../codewars_katas/kyu_8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codewars_katas/kyu_8/.idea/workspace.xml" afterDir="false" />
@@ -16,6 +15,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/BowlingGame$ScoreCardTest_scoreSpareRolTest.ic" NAME="ScoreCardTest.scoreSpareRolTest Coverage Results" MODIFIED="1548770697116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="241" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -27,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ScoreCardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+            <state relative-caret-position="350">
+              <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ScoreCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="316">
+              <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -64,8 +69,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ScoreCard.java" />
         <option value="$PROJECT_DIR$/src/test/java/ScoreCardTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ScoreCard.java" />
       </list>
     </option>
   </component>
@@ -114,7 +119,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548763359619" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548771286352" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -131,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ScoreCardTest.scoreNormalRolTest">
+  <component name="RunManager" selected="JUnit.ScoreCardTest.scoreSpareRolTest">
     <configuration name="ScoreCardTest.ScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BowlingGame" />
       <option name="PACKAGE_NAME" value="" />
@@ -152,8 +157,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreCardTest.scoreSpareRolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BowlingGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ScoreCardTest" />
+      <option name="METHOD_NAME" value="scoreSpareRolTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ScoreCardTest.scoreSpareRolTest" />
         <item itemvalue="JUnit.ScoreCardTest.scoreNormalRolTest" />
         <item itemvalue="JUnit.ScoreCardTest.ScoreTest" />
       </list>
@@ -173,8 +189,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ScoreCardTest_ScoreTest - 2019.01.29 at 12h 58m 26s.xml">
-      <configuration name="ScoreCardTest.ScoreTest" configurationId="JUnit" />
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 05m 14s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 05m 17s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 05m 20s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 09m 00s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 10m 02s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 10m 32s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 13m 27s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 13m 31s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 14m 31s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ScoreCardTest_scoreSpareRolTest - 2019.01.29 at 15h 14m 50s.xml">
+      <configuration name="ScoreCardTest.scoreSpareRolTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -195,7 +238,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -204,6 +247,7 @@
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -217,20 +261,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ScoreCard.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="357">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="657" selection-start-line="657" selection-end-line="657" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
+          <folding>
+            <element signature="e#8383#8384#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ScoreCardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        <state relative-caret-position="350">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ScoreCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
         </state>
       </provider>
     </entry>

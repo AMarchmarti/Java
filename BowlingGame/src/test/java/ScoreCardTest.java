@@ -28,4 +28,13 @@ public class ScoreCardTest {
         int total = 0;
         assertEquals(60, card.scoreNormalRol(punts, total));
     }
+
+    @Test
+    public void scoreSpareRolTest(){
+        String pwSpare = "123456789/";
+        String pwSpareTwo = "5/5/5/5/5/5/5/5/5/5/5";
+        int total = 0;
+        assertEquals(55, card.scoreSpareRol(pwSpare, total));
+        assertEquals(150, card.scoreSpareRol(pwSpareTwo, total));
+    }
 }
