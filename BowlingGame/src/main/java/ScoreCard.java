@@ -27,4 +27,11 @@ public class ScoreCard {
             return num;
         }
     }
+
+    public int scoreNormalRol (String card, int total){
+        for (int pos = 0; pos < card.length(); pos++){
+            total += getBowl(card.charAt(pos));
+        }
+        return total;
+    }
 }

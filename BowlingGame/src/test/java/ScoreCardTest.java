@@ -5,12 +5,11 @@ import static org.junit.Assert.*;
 
 
 public class ScoreCardTest {
-
+    ScoreCard card = new ScoreCard();
 
     @Test
-    public void ScoreTest(){
-        ScoreCard card = new ScoreCard();
-        String str = "-123456789X/";
+    public void bowlsTest(){
+
         Character x = 'X';
         Character spare = '/';
         Character script = '-';
@@ -20,5 +19,13 @@ public class ScoreCardTest {
         assertEquals(0, card.getBowl('-'));
         assertEquals(6, card.getBowl('6'));
 
+    }
+
+    @Test
+    public void scoreNormalRolTest (){
+
+        String punts = "12345123451234512345";
+        int total = 0;
+        assertEquals(60, card.scoreNormalRol(punts, total));
     }
 }
