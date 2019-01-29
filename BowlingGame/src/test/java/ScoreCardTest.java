@@ -9,16 +9,16 @@ public class ScoreCardTest {
 
     @Test
     public void bowlsTest(){
-
-        Character x = 'X';
-        Character spare = '/';
-        Character script = '-';
-        Character num = '6';
-        assertEquals(10, card.getStrike(x));
-        assertEquals(10, card.getSpare(spare));
-        assertEquals(0, card.getBowl(script));
-        assertEquals(6, card.getBowl(num));
-
+        String symbols = "-123456789X/";
+        for (int index = 0; index < symbols.length(); index ++){
+            if (symbols.charAt(index) == '/'){
+                assertEquals(10, card.getSpare(symbols.charAt(index)));
+            }else if (symbols.charAt(index) == 'X') {
+                assertEquals(10, card.getStrike(symbols.charAt(index)));
+            }else {
+                assertEquals(index,card.getBowl(symbols.charAt(index)));
+            }
+        }
     }
 
     @Test
