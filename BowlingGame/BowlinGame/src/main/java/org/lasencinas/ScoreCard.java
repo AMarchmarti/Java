@@ -1,3 +1,6 @@
+package org.lasencinas;
+
+
 public class ScoreCard {
 
     private int STRIKE = 10;
@@ -50,13 +53,12 @@ public class ScoreCard {
         for (int i = 0; i < card.length(); i++) {
             Character normal = card.charAt(i);
             try {
-                Character min = card.charAt(i - 1);
                 Character spare = card.charAt(i + 1);
                 Character strike = card.charAt(i + 2);
                 if (normal == 'X'){
                     scoreStrike(normal, spare, strike, total);
                 } else if (normal == '/'){
-                    scoreSpare(normal, spare, min, total);
+                    scoreSpare(normal, spare, total, i, card);
                 } else {
                     total += calculatePin(normal);
                 }
@@ -85,7 +87,8 @@ public class ScoreCard {
         }
     }
 
-    public void scoreSpare(Character normal, Character spare, Character min, int total) {
+    public void scoreSpare(Character normal, Character spare, int total, int i, String card) {
+        Character min = card.charAt(i - 1);
         if (spare != 'X') {
             total += calculateSpare(normal) + calculatePin(spare) - calculatePin(min);
         } else if (spare == 'X') {
@@ -93,5 +96,5 @@ public class ScoreCard {
         }
     }
 
-
 }
+
