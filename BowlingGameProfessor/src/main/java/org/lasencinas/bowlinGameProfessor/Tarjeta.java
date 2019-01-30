@@ -1,4 +1,4 @@
-package org.lasencinas.bowlinGame;
+package org.lasencinas.bowlinGameProfessor;
 
 public class Tarjeta {
 
@@ -80,7 +80,18 @@ public class Tarjeta {
         // if X => strike. if numero, if spare...    esStrike.
 
         for(int bola = 0; bola < tarjeta.length(); bola++) {
-            this.puntuacionTotal += this.computarPines(tarjeta.charAt(bola));
+            Character actual = tarjeta.charAt(bola);
+            if (actual == 'X'){
+                if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) == 'X')){
+                    this.puntuacionTotal += this.computarStrike(actual) * 3;
+                }else if((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) != 'X') ){
+                    this.puntuacionTotal += this.computarStrike(actual) * 2 + this.computarPines(tarjeta.charAt(bola + 2));
+                }else if ((tarjeta.charAt(bola + 1) != 'X') && (tarjeta.charAt(bola + 2)) == '/') {
+                    this.puntuacionTotal += this.computarStrike(actual) * 2;
+                }else
+                    this.puntuacionTotal += this.computarStrike(actual) + computarPines(tarjeta.charAt(bola + 1)) + this.computarPines(tarjeta.charAt(bola + 2));
+            }else
+                this.puntuacionTotal += this.computarPines(actual);
         }
 
         return this.puntuacionTotal;
