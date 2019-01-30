@@ -54,11 +54,25 @@ public class ScoreCard {
             Character normal = card.charAt(i);
             try {
                 Character spare = card.charAt(i + 1);
+                /*
                 Character strike = card.charAt(i + 2);
                 if (normal == 'X'){
-                    scoreStrike(normal, spare, strike, total);
-                } else if (normal == '/'){
-                    scoreSpare(normal, spare, total, i, card);
+                    if ((spare == 'X') && (strike == 'X')) {
+                        total += calculateStrike(normal) + calculateStrike(spare) + calculateStrike(strike);
+                    } else if ((spare == 'X') && (strike != 'X')) {
+                        total += calculateStrike(normal) + calculateStrike(spare) + calculatePin(strike);
+                    } else if ((spare != 'X') && (strike == '/')) {
+                        total += calculateStrike(normal) + calculateSpare(strike);
+                    } else {
+                        total += calculateStrike(normal) + calculatePin(spare) + calculatePin(strike);
+                    }
+                    */
+                if (normal == '/'){
+                    if (spare != 'X') {
+                        total += calculateSpare(normal) + calculatePin(spare) - calculatePin(card.charAt(i - 1));
+                    } else if (spare == 'X') {
+                        total += calculateSpare(normal) + calculateStrike(spare) - calculatePin(card.charAt(i - 1));
+                    }
                 } else {
                     total += calculatePin(normal);
                 }
@@ -68,13 +82,17 @@ public class ScoreCard {
                 } else if (normal == 'X') {
                     total += calculateStrike(normal);
                 } else {
-                    return total;
+                    if (card.charAt(i - 1) != '/'){
+                        total += calculatePin(normal);
+                    }else{
+                        return total;
+                    }
                 }
             }
         }
         return total;
     }
-
+/*
     public void scoreStrike(Character normal, Character spare, Character strike, int total) {
         if ((spare == 'X') && (strike == 'X')) {
             total += calculateStrike(normal) + calculateStrike(spare) + calculateStrike(strike);
@@ -87,14 +105,13 @@ public class ScoreCard {
         }
     }
 
-    public void scoreSpare(Character normal, Character spare, int total, int i, String card) {
-        Character min = card.charAt(i - 1);
+    public void scoreSpare(Character normal, Character spare, Character min, int total) {
         if (spare != 'X') {
             total += calculateSpare(normal) + calculatePin(spare) - calculatePin(min);
         } else if (spare == 'X') {
             total += calculateSpare(normal) + calculateStrike(spare) - calculatePin(min);
         }
     }
-
+    */
 }
 
