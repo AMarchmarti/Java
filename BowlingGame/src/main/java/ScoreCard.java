@@ -54,22 +54,13 @@ public class ScoreCard {
                 Character min = card.charAt(i - 1);
                 Character spare = card.charAt(i + 1);
                 Character strike = card.charAt(i + 2);
-                if ((normal == 'X') && (spare == 'X') && (strike == 'X')) {
-                    total += calculateStrike(normal) + calculateStrike(spare) + calculateStrike(strike);
-                } else if ((normal == 'X') && (spare == 'X') && (strike != 'X')) {
-                    total += calculateStrike(normal) + calculateStrike(spare) + calculatePin(strike);
-                } else if ((normal == 'X') && (spare != 'X') && (strike == '/')) {
-                    total += calculateStrike(normal) + calculateSpare(strike);
-                } else if (normal == 'X') {
-                    total += calculateStrike(normal) + calculatePin(spare) + calculatePin(strike);
-                } else if ((normal == '/') && (spare != 'X')) {
-                    total += calculateSpare(normal) + calculatePin(spare) - calculatePin(min);
-                } else if ((normal == '/') && (spare == 'X')) {
-                    total += calculateSpare(normal) + calculateStrike(spare) - calculatePin(min);
+                if (normal == 'X'){
+                    scoreStrike(normal, spare, strike, total);
+                } else if (normal == '/'){
+                    scoreSpare(normal, spare, min, total);
                 } else {
                     total += calculatePin(normal);
                 }
-
             } catch (StringIndexOutOfBoundsException spare) {
                 if (normal == '/') {
                     total += calculateSpare(normal);
@@ -81,6 +72,26 @@ public class ScoreCard {
             }
         }
         return total;
+    }
+
+    public void scoreStrike(Character normal, Character spare, Character strike, int total) {
+        if ((spare == 'X') && (strike == 'X')) {
+            total += calculateStrike(normal) + calculateStrike(spare) + calculateStrike(strike);
+        } else if ((spare == 'X') && (strike != 'X')) {
+            total += calculateStrike(normal) + calculateStrike(spare) + calculatePin(strike);
+        } else if ((spare != 'X') && (strike == '/')) {
+            total += calculateStrike(normal) + calculateSpare(strike);
+        } else {
+            total += calculateStrike(normal) + calculatePin(spare) + calculatePin(strike);
+        }
+    }
+
+    public void scoreSpare(Character normal, Character spare, Character min, int total) {
+        if (spare != 'X') {
+            total += calculateSpare(normal) + calculatePin(spare) - calculatePin(min);
+        } else if (spare == 'X') {
+            total += calculateSpare(normal) + calculateStrike(spare) - calculatePin(min);
+        }
     }
 
 }
