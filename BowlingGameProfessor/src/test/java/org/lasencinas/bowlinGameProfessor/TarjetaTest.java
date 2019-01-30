@@ -11,7 +11,7 @@ public class TarjetaTest {
         tarjeta = new Tarjeta();
     }
 
-
+/*
     @Test
     public void computarStrikeTest() {
 
@@ -19,7 +19,7 @@ public class TarjetaTest {
         Assert.assertEquals(0, tarjeta.computarStrike('9'));
     }
 
-
+*/
     @Test
     public void computePinTest() {
         String pines = "-123456789";
@@ -49,14 +49,20 @@ public class TarjetaTest {
         String strikePins = "XXX9-9-9-9-9-9-9-";
         tarjeta = new Tarjeta(strikePins);
         Assert.assertEquals(141, tarjeta.computarTarjeta(strikePins));
-        // Vamos a compr
+        // Vamos a comprobar los casos con spare//
+        String pinsSpare = "5/5/5/5/5/5/5/5/5/5/";
+        tarjeta = new Tarjeta(pinsSpare);
+        Assert.assertEquals(150, tarjeta.computarTarjeta(pinsSpare));
+        String threePins = "9-3/613/815/-/8-7/8/";
+        tarjeta = new Tarjeta(threePins);
+        Assert.assertEquals(131, tarjeta.computarTarjeta(threePins));
 
     }
 
 
 
 
-
+/*
     @Test
     public void computarSpareTest() {
 
@@ -64,6 +70,5 @@ public class TarjetaTest {
         Assert.assertEquals(0, tarjeta.computarSpare("9X"));
 
         // comprobar que antes se ha lanzado una bola y no es un Strike.
-    }
-
+    }*/
 }

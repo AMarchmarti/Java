@@ -45,26 +45,43 @@ public class Tarjeta {
 
 
 
-    public static int computarStrike(char strike) {
-        if( strike == 'X' ) {
-            return 10;
-        } else {
-            return 0;
-        }
+    public void computarStrike(int bola, String tarjeta) {
+        /*
+        for (int next = 1; next <=2; next++){
+            if (tarjeta.charAt(bola + next) == 'X'){
+                this.puntuacionTotal += this.STRIKE;
+            }else if (tarjeta.charAt(bola + next) == '/'){
+                this.puntuacionTotal += this.STRIKE + this.SPARE;
+            }else{
+                this.puntuacionTotal += this.STRIKE + this.computarPines(tarjeta.charAt(bola + next));
+            }
+        }}*/
 
+        if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) == 'X')) {
+            this.puntuacionTotal += this.STRIKE * 3;
+        } else if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) != 'X')) {
+            this.puntuacionTotal += this.STRIKE * 2 + this.computarPines(tarjeta.charAt(bola + 2));
+        } else if ((tarjeta.charAt(bola + 1) != 'X') && (tarjeta.charAt(bola + 2)) == '/') {
+            this.puntuacionTotal += this.STRIKE * 2;
+        } else
+            this.puntuacionTotal += this.STRIKE + computarPines(tarjeta.charAt(bola + 1)) + this.computarPines(tarjeta.charAt(bola + 2));
     }
 
 
-    public int computarSpare(String frame) {
+
+
+    public void computarSpare(int pos, String tarjeta) {
 
         try {
-            if (frame.charAt(1) == '/') {
-                return  this.SPARE;
+            Character a = tarjeta.charAt(pos + 1);
+            this.puntuacionTotal -= this.computarPines(tarjeta.charAt(pos - 1));
+            if (a == 'X') {
+                this.puntuacionTotal += this.SPARE + this.STRIKE;
             } else {
-                return this.CERO;
+                this.puntuacionTotal += this.SPARE + this.computarPines(a);
             }
-        } catch (StringIndexOutOfBoundsException e) {
-            return this.CERO;
+        } catch (StringIndexOutOfBoundsException a) {
+            this.puntuacionTotal += this.SPARE;
         }
 
     }
@@ -79,22 +96,17 @@ public class Tarjeta {
 
         // if X => strike. if numero, if spare...    esStrike.
 
-        for(int bola = 0; bola < tarjeta.length(); bola++) {
+        for (int bola = 0; bola < tarjeta.length(); bola++) {
             Character actual = tarjeta.charAt(bola);
-            if (actual == 'X'){
-                if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) == 'X')){
-                    this.puntuacionTotal += this.computarStrike(actual) * 3;
-                }else if((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) != 'X') ){
-                    this.puntuacionTotal += this.computarStrike(actual) * 2 + this.computarPines(tarjeta.charAt(bola + 2));
-                }else if ((tarjeta.charAt(bola + 1) != 'X') && (tarjeta.charAt(bola + 2)) == '/') {
-                    this.puntuacionTotal += this.computarStrike(actual) * 2;
-                }else
-                    this.puntuacionTotal += this.computarStrike(actual) + computarPines(tarjeta.charAt(bola + 1)) + this.computarPines(tarjeta.charAt(bola + 2));
-            }else
+            if (actual == 'X') {
+                computarStrike(bola, tarjeta);
+            } else if (actual == '/') {
+                computarSpare(bola, tarjeta);
+            } else {
                 this.puntuacionTotal += this.computarPines(actual);
-        }
+            }}
 
-        return this.puntuacionTotal;
+            return this.puntuacionTotal;
+        }
     }
 
-}
