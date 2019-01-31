@@ -86,6 +86,10 @@ public class Tarjeta {
 
     }
 
+    public Boolean extraFrame (String tarjeta){
+        if
+    }
+
 
     public int computarPines(char pins) {
         return this.pines.indexOf(pins);
@@ -95,16 +99,24 @@ public class Tarjeta {
     public int computarTarjeta(String tarjeta) {
 
         // if X => strike. if numero, if spare...    esStrike.
-
+        Character specialFrame = tarjeta.charAt(tarjeta.length() - 3);
+        Character special = tarjeta.charAt(tarjeta.length() - 2);
         for (int bola = 0; bola < tarjeta.length(); bola++) {
             Character actual = tarjeta.charAt(bola);
-            if (actual == 'X') {
+            if ((specialFrame == 'X') && (bola == tarjeta.length() - 3 )){
                 computarStrike(bola, tarjeta);
-            } else if (actual == '/') {
-                computarSpare(bola, tarjeta);
-            } else {
-                this.puntuacionTotal += this.computarPines(actual);
-            }}
+                return this.puntuacionTotal;
+            }else if ((special == '/') && (bola == tarjeta.length() - 2)){
+                computarSpare(bola,tarjeta);
+                return this.puntuacionTotal;
+            }else{
+                 if (actual == 'X') {
+                    computarStrike(bola, tarjeta);
+                } else if (actual == '/') {
+                    computarSpare(bola, tarjeta);
+                } else {
+                    this.puntuacionTotal += this.computarPines(actual);
+                }}}
 
             return this.puntuacionTotal;
         }
