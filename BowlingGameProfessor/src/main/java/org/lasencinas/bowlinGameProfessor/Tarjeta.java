@@ -48,17 +48,6 @@ public class Tarjeta {
 
 
     public void computarStrike(int bola, String tarjeta) {
-        /*
-        for (int next = 1; next <=2; next++){
-            if (tarjeta.charAt(bola + next) == 'X'){
-                this.puntuacionTotal += this.STRIKE;
-            }else if (tarjeta.charAt(bola + next) == '/'){
-                this.puntuacionTotal += this.STRIKE + this.SPARE;
-            }else{
-                this.puntuacionTotal += this.STRIKE + this.computarPines(tarjeta.charAt(bola + next));
-            }
-        }}*/
-
         if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) == 'X')) {
             this.puntuacionTotal += this.STRIKE * 3;
         } else if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) != 'X')) {
@@ -88,7 +77,7 @@ public class Tarjeta {
 
     }
 
-    public ArrayList extraFrame (String tarjeta){
+    public ArrayList extraTirada(String tarjeta){
         ArrayList <ArrayList> newCard = new ArrayList<ArrayList>();
         int bola = 0;
         while (bola < tarjeta.length()) {
@@ -113,20 +102,14 @@ public class Tarjeta {
         }
         return newCard;
     }
-    public ArrayList tarjetaArray(String tarjeta){
-        ArrayList tarArr = new ArrayList();
-        for (int i = 0; i < tarjeta.length(); i++){
-            tarArr.add(tarjeta.charAt(i));
-        }
-        return tarArr;
-    }
 
-    public Boolean isExtraFrame (String tarjeta){
-        ArrayList newCard = extraFrame(tarjeta);
-        ArrayList tarArr = tarjetaArray(tarjeta);
-        int lastPosStri = tarArr.size() - 1;
+    public Boolean esExtraTirada(String tarjeta){
+        ArrayList newCard = extraTirada(tarjeta);
         int lastPos = newCard.size() - 1;
-        if  (newCard.indexOf(lastPos) == tarArr.indexOf(lastPosStri)){
+        Object lastFrame = newCard.get(lastPos);
+        String ultimoFrame = lastFrame.toString();
+
+        if  (ultimoFrame.length() == 3){
             return true;
         }else{
             return false;
@@ -138,38 +121,34 @@ public class Tarjeta {
         return this.pines.indexOf(pins);
     }
 
+    public void tiradaNormal(String tarjeta, int bola){
+        Character actual = tarjeta.charAt(bola);
+        if (actual == 'X') {
+            computarStrike(bola, tarjeta);
+        } else if (actual == '/') {
+            computarSpare(bola, tarjeta);
+        } else {
+            this.puntuacionTotal += this.computarPines(actual);}}
+
 
     public int computarTarjeta(String tarjeta) {
-        ArrayList newCard = extraFrame(tarjeta);
-        Character specialFrame = tarjeta.charAt(tarjeta.length() - 3);
-        Character special = tarjeta.charAt(tarjeta.length() - 2);
-        if (isExtraFrame(tarjeta)){
+        Character bolaEspecial = tarjeta.charAt(tarjeta.length() - 3);
+        Character especial = tarjeta.charAt(tarjeta.length() - 2);
+        if (esExtraTirada(tarjeta)){
             for (int bola = 0; bola < tarjeta.length(); bola++) {
-            Character actual = tarjeta.charAt(bola);
-            if ((specialFrame == 'X') && (bola == tarjeta.length() - 3 )){
+            if ((bolaEspecial == 'X') && (bola == tarjeta.length() - 3 )){
                 computarStrike(bola, tarjeta);
                 return this.puntuacionTotal;
-            }else if ((special == '/') && (bola == tarjeta.length() - 2)){
+            }else if ((especial == '/') && (bola == tarjeta.length() - 2)){
                 computarSpare(bola,tarjeta);
                 return this.puntuacionTotal;}
-            else{
-                if (actual == 'X') {
-                    computarStrike(bola, tarjeta);
-                } else if (actual == '/') {
-                    computarSpare(bola, tarjeta);
-                } else {
-                    this.puntuacionTotal += this.computarPines(actual);
-                }}}
+            else{tiradaNormal(tarjeta, bola);}}
         }else{
             for (int bola = 0; bola < tarjeta.length(); bola++) {
-                Character actual = tarjeta.charAt(bola);
-                if (actual == 'X') {
-                    computarStrike(bola, tarjeta);
-                } else if (actual == '/') {
-                    computarSpare(bola, tarjeta);
-                } else {
-                    this.puntuacionTotal += this.computarPines(actual);}
-        }}
+                tiradaNormal(tarjeta, bola);
+            }
+
+        }
 
         return this.puntuacionTotal;}}
 

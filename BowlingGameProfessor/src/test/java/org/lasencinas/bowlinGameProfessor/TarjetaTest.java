@@ -60,21 +60,10 @@ public class TarjetaTest {
         //Finalmente comprobaremos tiradas aleatorias para saber si el codigo funciona//
         String fullStrikes = "XXXXXXXXXXXX";
         tarjeta = new Tarjeta(fullStrikes);
-        Assert.assertEquals(300, tarjeta.computarTarjeta(fullStrikes));/*
+        Assert.assertEquals(300, tarjeta.computarTarjeta(fullStrikes));
         String JOSE = "1/27XXX-/X3/X11";
         tarjeta = new Tarjeta(JOSE);
-        Assert.assertEquals(165, tarjeta.computarTarjeta(JOSE));*/
+        Assert.assertEquals(165, tarjeta.computarTarjeta(JOSE));
     }
 
-
-
-/*
-    @Test
-    public void computarSpareTest() {
-
-        Assert.assertEquals(10, tarjeta.computarSpare("5/"));
-        Assert.assertEquals(0, tarjeta.computarSpare("9X"));
-
-        // comprobar que antes se ha lanzado una bola y no es un Strike.
-    }*/
 }
