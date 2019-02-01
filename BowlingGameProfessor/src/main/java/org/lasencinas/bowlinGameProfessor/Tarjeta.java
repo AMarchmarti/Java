@@ -1,5 +1,7 @@
 package org.lasencinas.bowlinGameProfessor;
 
+import java.util.ArrayList;
+
 public class Tarjeta {
 
     /* Declaración variables */
@@ -86,8 +88,49 @@ public class Tarjeta {
 
     }
 
-    public Boolean extraFrame (String tarjeta){
-        if
+    public ArrayList extraFrame (String tarjeta){
+        ArrayList <ArrayList> newCard = new ArrayList<ArrayList>();
+        int bola = 0;
+        while (bola < tarjeta.length()) {
+            ArrayList <Character> frame = new ArrayList<Character>();
+            try{
+                char extra = tarjeta.charAt(bola +1);
+                if (tarjeta.charAt(bola) == 'X'){
+                    frame.add(tarjeta.charAt(bola));
+                    newCard.add(frame);
+                    bola++;
+                } else{
+                    frame.add(tarjeta.charAt(bola));
+                    frame.add(extra);
+                    newCard.add(frame);
+                    bola += 2;}
+
+            }catch (StringIndexOutOfBoundsException extra){
+                frame.add(tarjeta.charAt(bola));
+                newCard.add(frame);
+                return newCard;
+            }
+        }
+        return newCard;
+    }
+    public ArrayList tarjetaArray(String tarjeta){
+        ArrayList tarArr = new ArrayList();
+        for (int i = 0; i < tarjeta.length(); i++){
+            tarArr.add(tarjeta.charAt(i));
+        }
+        return tarArr;
+    }
+
+    public Boolean isExtraFrame (String tarjeta){
+        ArrayList newCard = extraFrame(tarjeta);
+        ArrayList tarArr = tarjetaArray(tarjeta);
+        int lastPosStri = tarArr.size() - 1;
+        int lastPos = newCard.size() - 1;
+        if  (newCard.indexOf(lastPos) == tarArr.indexOf(lastPosStri)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
@@ -97,28 +140,36 @@ public class Tarjeta {
 
 
     public int computarTarjeta(String tarjeta) {
-
-        // if X => strike. if numero, if spare...    esStrike.
+        ArrayList newCard = extraFrame(tarjeta);
         Character specialFrame = tarjeta.charAt(tarjeta.length() - 3);
         Character special = tarjeta.charAt(tarjeta.length() - 2);
-        for (int bola = 0; bola < tarjeta.length(); bola++) {
+        if (isExtraFrame(tarjeta)){
+            for (int bola = 0; bola < tarjeta.length(); bola++) {
             Character actual = tarjeta.charAt(bola);
             if ((specialFrame == 'X') && (bola == tarjeta.length() - 3 )){
                 computarStrike(bola, tarjeta);
                 return this.puntuacionTotal;
             }else if ((special == '/') && (bola == tarjeta.length() - 2)){
                 computarSpare(bola,tarjeta);
-                return this.puntuacionTotal;
-            }else{
-                 if (actual == 'X') {
+                return this.puntuacionTotal;}
+            else{
+                if (actual == 'X') {
                     computarStrike(bola, tarjeta);
                 } else if (actual == '/') {
                     computarSpare(bola, tarjeta);
                 } else {
                     this.puntuacionTotal += this.computarPines(actual);
                 }}}
+        }else{
+            for (int bola = 0; bola < tarjeta.length(); bola++) {
+                Character actual = tarjeta.charAt(bola);
+                if (actual == 'X') {
+                    computarStrike(bola, tarjeta);
+                } else if (actual == '/') {
+                    computarSpare(bola, tarjeta);
+                } else {
+                    this.puntuacionTotal += this.computarPines(actual);}
+        }}
 
-            return this.puntuacionTotal;
-        }
-    }
+        return this.puntuacionTotal;}}
 

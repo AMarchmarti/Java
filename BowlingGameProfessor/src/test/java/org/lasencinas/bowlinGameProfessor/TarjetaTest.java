@@ -33,7 +33,8 @@ public class TarjetaTest {
 
     @Test
     public void computarTarjetaVeinteBolasTest() {
-         String puntuacion = "11111111111111111111";
+
+        String puntuacion = "11111111111111111111";
         tarjeta = new Tarjeta(puntuacion);
         Assert.assertEquals(20, tarjeta.computarTarjeta(puntuacion));
         String pins = "12345123451234512345";
@@ -49,7 +50,7 @@ public class TarjetaTest {
         String strikePins = "XXX9-9-9-9-9-9-9-";
         tarjeta = new Tarjeta(strikePins);
         Assert.assertEquals(141, tarjeta.computarTarjeta(strikePins));
-        // Vamos a comprobar los casos con spare//*
+        // Vamos a comprobar los casos con spare//
         String pinsSpare = "5/5/5/5/5/5/5/5/5/5/5";
         tarjeta = new Tarjeta(pinsSpare);
         Assert.assertEquals(150, tarjeta.computarTarjeta(pinsSpare));
@@ -59,12 +60,11 @@ public class TarjetaTest {
         //Finalmente comprobaremos tiradas aleatorias para saber si el codigo funciona//
         String fullStrikes = "XXXXXXXXXXXX";
         tarjeta = new Tarjeta(fullStrikes);
-        Assert.assertEquals(300, tarjeta.computarTarjeta(fullStrikes));
+        Assert.assertEquals(300, tarjeta.computarTarjeta(fullStrikes));/*
         String JOSE = "1/27XXX-/X3/X11";
         tarjeta = new Tarjeta(JOSE);
-        Assert.assertEquals(165, tarjeta.computarTarjeta(JOSE));
+        Assert.assertEquals(165, tarjeta.computarTarjeta(JOSE));*/
     }
-
 
 
 
