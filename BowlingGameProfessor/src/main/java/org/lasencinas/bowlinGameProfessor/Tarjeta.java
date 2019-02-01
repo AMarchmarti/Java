@@ -46,7 +46,7 @@ public class Tarjeta {
     /* Interfaz Publica */
 
 
-
+    //Método para calcular Strike//
     public void computarStrike(int bola, String tarjeta) {
         if ((tarjeta.charAt(bola + 1) == 'X') && (tarjeta.charAt(bola + 2) == 'X')) {
             this.puntuacionTotal += this.STRIKE * 3;
@@ -58,9 +58,7 @@ public class Tarjeta {
             this.puntuacionTotal += this.STRIKE + computarPines(tarjeta.charAt(bola + 1)) + this.computarPines(tarjeta.charAt(bola + 2));
     }
 
-
-
-
+    //Método para el cálculo del Spare//
     public void computarSpare(int pos, String tarjeta) {
 
         try {
@@ -77,6 +75,8 @@ public class Tarjeta {
 
     }
 
+
+    //Método para calcular la tirada extra//
     public ArrayList extraTirada(String tarjeta){
         ArrayList <ArrayList> newCard = new ArrayList<ArrayList>();
         int bola = 0;
@@ -103,6 +103,7 @@ public class Tarjeta {
         return newCard;
     }
 
+    //Método para saber si tenemos o no una extra tirada//
     public Boolean esExtraTirada(String tarjeta){
         ArrayList newCard = extraTirada(tarjeta);
         int lastPos = newCard.size() - 1;
@@ -117,10 +118,13 @@ public class Tarjeta {
     }
 
 
+    //Método para obtener los bolos que no son Spare o Strike//
     public int computarPines(char pins) {
         return this.pines.indexOf(pins);
     }
 
+
+    //Metodo para una tirada normal//
     public void tiradaNormal(String tarjeta, int bola){
         Character actual = tarjeta.charAt(bola);
         if (actual == 'X') {
@@ -130,7 +134,7 @@ public class Tarjeta {
         } else {
             this.puntuacionTotal += this.computarPines(actual);}}
 
-
+    //Aqui vamos a formar la logica para sumar los puntos y nos devuelva la puntuación total//
     public int computarTarjeta(String tarjeta) {
         Character bolaEspecial = tarjeta.charAt(tarjeta.length() - 3);
         Character especial = tarjeta.charAt(tarjeta.length() - 2);
