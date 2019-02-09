@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bdfe46db-a36e-41df-b752-04c9fa45391c" name="Default Changelist" comment="">
 <<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CurrentAccount/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CurrentAccount/.idea/workspace.xml" afterDir="false" />
@@ -13,6 +16,7 @@
 =======
       <change beforePath="$PROJECT_DIR$/src/estacion/Estacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/estacion/Estacion.java" afterDir="false" />
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +33,12 @@
 <<<<<<< HEAD
             <state relative-caret-position="969">
 =======
+<<<<<<< HEAD
+            <state relative-caret-position="969">
+=======
             <state relative-caret-position="340">
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
               <caret line="59" column="119" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tarjetaUsuario/TarjetaUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="272">
               <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
             </state>
           </provider>
@@ -61,10 +69,14 @@
         <entry file="file://$PROJECT_DIR$/src/estacion/Estacion.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="17">
+=======
+<<<<<<< HEAD
             <state relative-caret-position="190">
               <caret line="111" column="56" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
 =======
             <state relative-caret-position="290">
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
               <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
               <folding>
@@ -262,10 +274,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
 =======
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
+=======
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -342,8 +357,12 @@
 <<<<<<< HEAD
         <state relative-caret-position="969">
 =======
+<<<<<<< HEAD
+        <state relative-caret-position="969">
+=======
         <state relative-caret-position="340">
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
           <caret line="59" column="119" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="119" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -353,7 +372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tarjetaUsuario/TarjetaUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="272">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
         </state>
       </provider>
@@ -368,10 +387,14 @@
     <entry file="file://$PROJECT_DIR$/src/estacion/Estacion.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="17">
+=======
+<<<<<<< HEAD
         <state relative-caret-position="190">
           <caret line="111" column="56" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
 =======
         <state relative-caret-position="290">
+>>>>>>> dfb8f1113b671d38669a06e25d1c133ab31b3ddf
           <caret line="88" column="52" selection-start-line="88" selection-start-column="52" selection-end-line="88" selection-end-column="52" />
 >>>>>>> 87839a160cbdc246a42c0cdc59d07335f0bec622
           <folding>
