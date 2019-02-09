@@ -28,47 +28,35 @@ public class ScoreCard {
         }
     }
 
-    public int scoreNormalRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            total += getBowl(card.charAt(pos));
-        }
-        return total;
+    public void scoreNormalRol (String card, int pos, int total){
+
+        total += getBowl(card.charAt(pos));
     }
-    /*
-    public int scoreStrikeRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            Character variable = card.charAt(pos);
-            if (variable == 'X') {
-                try{
-                    int num = getSpare(card.charAt(pos  + 1));
-                    int numb = getSpare(card.charAt(pos + 2));
-                    total += getStrike(variable) + num + numb;
-                }catch (NumberFormatException num){
 
+    public void scoreSpareRol (String card, int pos, int total){
+        Character variable = card.charAt(pos);
+        try{
+            Character var = card.charAt(pos + 1);
+            if (variable == '/'){
+                total += getSpare(variable) + getBowl(var) - getBowl(card.charAt(pos - 1));
 
+            }else{
+                total += getBowl(variable);
+            }}
+        catch (StringIndexOutOfBoundsException var){
+            if (variable == '/'){
+                total += getSpare(variable);
+
+            }else{
+                total += 0;
             }
+        }}
+
+
+    public int scoreCard (String card, int pos, int total){
+        Character var = card.charAt(pos);
+        if (var == '/'){
+            scoreSpareRol(card, pos, total);
+        }else if(var == 'X')
     }
-    */
-    public int scoreSpareRol (String card, int total){
-        for (int pos = 0; pos < card.length(); pos++){
-            Character variable = card.charAt(pos);
-
-            try{
-                Character var = card.charAt(pos + 1);
-                if (variable == '/'){
-                    total += getSpare(variable) + getBowl(var) - getBowl(card.charAt(pos - 1));
-
-                }else{
-                    total += getBowl(variable);
-                }}
-            catch (StringIndexOutOfBoundsException var){
-                if (variable == '/'){
-                    total += getSpare(variable);
-
-                }else{
-                    return total;
-                }
-            }
-        }
-        return total;}
 }
