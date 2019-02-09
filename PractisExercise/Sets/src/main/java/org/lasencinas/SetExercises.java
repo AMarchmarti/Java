@@ -37,5 +37,25 @@ public class SetExercises
             }
         }
         System.out.println(tree);
+
+        /* Dado el siguiente String, escribe en pantalla los
+        caracteres por los que está formado, y sólo una
+        vez los caracteres repetidos.
+         */
+        String nombre = "dabalearrozalazorraelabad";
+        TreeSet<Character> caracteres = new TreeSet<Character>();
+
+        for (int i = 0; i < nombre.length(); i++){
+            caracteres.add(nombre.charAt(i));
+        }
+
+        for (Character letra:caracteres){
+            System.out.println(letra + " ");
+
+        }
+        /* En este ejercicio vemos que letras estan dentro del String
+        aunque se repitan sólo cogera una vez su valor.
+        También será de forma ordenada.
+         */
     }
 }
