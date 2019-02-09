@@ -31,8 +31,11 @@ public class SetExercises
          */
 
         Collections.shuffle(numeros);
-        for (int i = 0; i < 8; i++){
-            tree.add(i);
+        for (Integer numero: numeros){
+            if (tree.size() < 8){
+                tree.add(numero);
+            }
         }
+        System.out.println(tree);
     }
 }
