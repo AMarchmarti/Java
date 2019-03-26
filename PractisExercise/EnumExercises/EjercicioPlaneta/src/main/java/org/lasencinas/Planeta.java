@@ -32,21 +32,6 @@ public enum Planeta {
     }
 
 
-    //Setters
-
-    public void setMasa(double masa) {
-        this.masa = masa;
-    }
-
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
-
-    public void setPlanetas(List<Double> planetas) {
-        this.planetas = planetas;
-    }
-
-
     //Getters
     public double getMasa() {
         return masa;
