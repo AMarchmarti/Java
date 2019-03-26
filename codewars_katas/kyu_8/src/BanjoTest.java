@@ -16,4 +16,7 @@ public class BanjoTest {
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
+    @org.junit.Test
+    public void areYouPlayingBanjo() {
+    }
 }
