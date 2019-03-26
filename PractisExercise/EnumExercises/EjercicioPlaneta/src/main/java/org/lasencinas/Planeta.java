@@ -18,7 +18,7 @@ public enum Planeta {
     //Atributos
     private double masa = 0d;
     private double radio = 0d;
-    private final double CONSTANTEGRAVITACIONAL = 6.67300E-11;
+    private final double CONSTANTEGRAVITACIONAL = 6.67300e-11;
     private List<Double> planetas = null;
 
     //Constructor
@@ -34,11 +34,11 @@ public enum Planeta {
 
     //Getters
     public double getMasa() {
-        return masa;
+        return this.masa;
     }
 
     public double getRadio() {
-        return radio;
+        return this.radio;
     }
 
     public double getCONSTANTEGRAVITACIONAL() {
@@ -56,12 +56,9 @@ public enum Planeta {
         return getCONSTANTEGRAVITACIONAL() * getMasa() / (Math.pow(getRadio(),2));
     }
 
-    public Double calcularTuMasa(Double peso){
-        return peso / EARTH.gravedadPlaneta();
-    }
 
     public Double pesoSuperficie(Double peso){
-        return calcularTuMasa(peso) / gravedadPlaneta();
+        return (peso * gravedadPlaneta()) / EARTH.gravedadPlaneta();
     }
 
     public static EnumSet<Planeta> getPlanetasTerrestres(){
