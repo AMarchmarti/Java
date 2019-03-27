@@ -11,4 +11,6 @@ public class Ajuntament
         private Set<Ejemplares> ejemplares = new HashSet<>();
         private String nombre = null;
         private String localizacion = null;
+
+
 }
