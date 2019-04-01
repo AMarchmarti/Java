@@ -5,6 +5,8 @@ public class Copias {
     private Revista revista = null;
     private Biblioteca bibliotecaPropietaria = null;
     private String fecha = null;
+    private Miembros miembro = null;
+    private Personal empleado = null;
 
 
     /* ---- Constructor ---- */

@@ -5,8 +5,7 @@ public class CopiasLibros extends Copias {
     /* ---- Atributos ---- */
     private Libros libro = null;
     private String editorial = null;
-    private Miembros miembro = null;
-    private Personal empleado = null;
+
 
 
     /* ---- Constructor ---- */
