@@ -1,8 +1,14 @@
 package entornos;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Ejemplares {
 
-    private String titulo = null;
+    //Atributos
+
     private String editorial = null;
-    private Integer numReferencia = null;
+    private String titulo = null;
+    private Set<Copias> listaCopias = new HashSet<>();
+
 }

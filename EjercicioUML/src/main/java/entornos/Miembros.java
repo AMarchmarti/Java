@@ -1,10 +1,36 @@
 package entornos;
 
-public class Miembros {
+public class Miembros extends Persona {
 
-        private String nombre = null;
-        private String apellidos = null;
-        private Integer edad = 0;
-        private CopiasLibros [] numeroCopias = new CopiasLibros[4];
-        private Integer limite = 1;
+        //Atributos
+
+        private String codeMiembro = null;
+        private Biblioteca biblioteca = null;
+
+        //constructor
+
+        public Miembros(String codeMiembro, Biblioteca biblioteca) {
+                this.codeMiembro = codeMiembro;
+                this.biblioteca = biblioteca;
+        }
+
+        //Setters
+
+        public void setCodeMiembro(String codeMiembro) {
+                this.codeMiembro = codeMiembro;
+        }
+
+        public void setBiblioteca(Biblioteca biblioteca) {
+                this.biblioteca = biblioteca;
+        }
+
+        //Getters
+
+        public String getCodeMiembro() {
+                return codeMiembro;
+        }
+
+        public Biblioteca getBiblioteca() {
+                return biblioteca;
+        }
 }
