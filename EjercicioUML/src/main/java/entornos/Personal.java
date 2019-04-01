@@ -1,11 +1,16 @@
 package entornos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Personal extends Persona{
 
     //Atributos
 
     private String codeEmpleado = null;
     private Biblioteca biblioteca = null;
+    private Libros [] copiasLibros = new Libros[2];
+    private List<Copias> listaCopias = new ArrayList<>();
 
     //constructor
 
@@ -32,6 +37,19 @@ public class Personal extends Persona{
 
     public Biblioteca getBiblioteca() {
         return biblioteca;
+    }
+
+    //Lógica
+    public void añadirLibro(Libros libros){
+        for (int i = 0; i < this.copiasLibros.length; i++) {
+            if (this.copiasLibros[i] == null) {
+                this.copiasLibros[i] = libros;
+            }
+        }
+    }
+
+    public void añadirCopias(Copias copia){
+        this.listaCopias.add(copia);
     }
 }
 
